@@ -7,7 +7,7 @@ public class Driver : MonoBehaviour
     [SerializeField] float steerSpeed = 100f;
     [SerializeField] float moveSpeed = 5f;
     [SerializeField] float slowSpeed = 1f;
-    [SerializeField] float boostSpeed = 20f;
+    [SerializeField] float boostSpeed = 30f;
 
     float boostTime = 0;
     bool boosted = false;
@@ -35,6 +35,7 @@ public class Driver : MonoBehaviour
         if ("Boost" == other.tag) {
             Debug.Log("Boost reached!");
             boosted = true;
+            boostTime = 0;
         }
     }
 
